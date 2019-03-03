@@ -1,12 +1,12 @@
 package com.idukelu.demo.demoribbon.business.service.impl;
 
 import com.idukelu.demo.demoribbon.business.pojo.dto.User;
-import com.idukelu.demo.demoribbon.business.service.UserService;
+import com.idukelu.demo.demoribbon.business.service.LoginService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class LoginServiceImpl implements LoginService {
     public ResponseEntity<?> CreateUser(User user) throws Exception{
         return ResponseEntity.ok(user);
     }
