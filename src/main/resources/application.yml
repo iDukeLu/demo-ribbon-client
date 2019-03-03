@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: eureka-ribbon
+    name: demo-ribbon
 
 eureka:
   client:
