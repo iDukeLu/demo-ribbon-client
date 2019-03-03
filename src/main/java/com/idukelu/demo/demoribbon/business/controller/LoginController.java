@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/user", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class LoginController {
 
     private LoginService loginService;
@@ -22,12 +22,12 @@ public class LoginController {
 
     @PostMapping("")
     public ResponseEntity<?> createUser(@RequestBody User user) throws Exception {
-        return loginService.CreateUser(user);
+        return loginService.createUser(user);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
-        return loginService.DeleteUser(id);
+        return loginService.deleteUser(id);
     }
 
     @PutMapping("")
