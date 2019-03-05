@@ -14,5 +14,7 @@ eureka:
     lease-expiration-duration-in-seconds: 15
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://39.105.99.4:8761/eureka/, http://39.106.44.105:8761/eureka/
