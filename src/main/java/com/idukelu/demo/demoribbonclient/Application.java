@@ -1,4 +1,4 @@
-package com.idukelu.demo.demoribbon;
+package com.idukelu.demo.demoribbonclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;

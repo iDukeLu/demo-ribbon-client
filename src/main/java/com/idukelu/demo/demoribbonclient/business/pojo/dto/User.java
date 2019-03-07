@@ -1,4 +1,4 @@
-package com.idukelu.demo.demoribbon.business.pojo.dto;
+package com.idukelu.demo.demoribbonclient.business.pojo.dto;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

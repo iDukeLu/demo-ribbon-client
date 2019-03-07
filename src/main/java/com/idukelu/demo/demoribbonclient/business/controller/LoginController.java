@@ -1,8 +1,8 @@
-package com.idukelu.demo.demoribbon.business.controller;
+package com.idukelu.demo.demoribbonclient.business.controller;
 
 
-import com.idukelu.demo.demoribbon.business.pojo.dto.User;
-import com.idukelu.demo.demoribbon.business.service.LoginService;
+import com.idukelu.demo.demoribbonclient.business.pojo.dto.User;
+import com.idukelu.demo.demoribbonclient.business.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

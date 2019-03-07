@@ -1,4 +1,4 @@
-package com.idukelu.demo.demoribbon.config.interceptor;
+package com.idukelu.demo.demoribbonclient.config.interceptor;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

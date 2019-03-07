@@ -1,4 +1,4 @@
-package com.idukelu.demo.demoribbon.config.interceptor;
+package com.idukelu.demo.demoribbonclient.config.interceptor;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,6 +1,6 @@
-package com.idukelu.demo.demoribbon.business.service;
+package com.idukelu.demo.demoribbonclient.business.service;
 
-import com.idukelu.demo.demoribbon.business.pojo.dto.User;
+import com.idukelu.demo.demoribbonclient.business.pojo.dto.User;
 import org.springframework.http.ResponseEntity;
 
 public interface LoginService {
