@@ -5,12 +5,12 @@
         <Property name="PID">????</Property>
         <Property name="LOG_PATTERN_CONSOLE">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx</Property>
         <Property name="LOG_PATTERN_FILE">%d{yyyy-MM-dd HH:mm:ss,SSS} %5p  ${sys:PID} --- [%15.15t]  %-40.40c{1.} : %m%n%xwEx</Property>
-        <Property name="FILE_NAME_INFO">${sys:user.home}/logs/demo-ribbon/info.log</Property>
-        <Property name="FILE_NAME_WARN">${sys:user.home}/logs/demo-ribbon/warn.log</Property>
-        <Property name="FILE_NAME_ERROR">${sys:user.home}/logs/demo-ribbon/error.log</Property>
-        <Property name="FILE_PATTERN_INFO">${sys:user.home}/logs/demo-ribbon/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log</Property>
-        <Property name="FILE_PATTERN_WARN">${sys:user.home}/logs/demo-ribbon/$${date:yyyy-MM}/warn-%d{yyyy-MM-dd}-%i.log</Property>
-        <Property name="FILE_PATTERN_ERROR">${sys:user.home}/logs/demo-ribbon/$${date:yyyy-MM}/error-%d{yyyy-MM-dd}-%i.log</Property>
+        <Property name="FILE_NAME_INFO">${sys:user.home}/logs/demo-ribbon-client/info.log</Property>
+        <Property name="FILE_NAME_WARN">${sys:user.home}/logs/demo-ribbon-client/warn.log</Property>
+        <Property name="FILE_NAME_ERROR">${sys:user.home}/logs/demo-ribbon-client/error.log</Property>
+        <Property name="FILE_PATTERN_INFO">${sys:user.home}/logs/demo-ribbon-client/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log</Property>
+        <Property name="FILE_PATTERN_WARN">${sys:user.home}/logs/demo-ribbon-client/$${date:yyyy-MM}/warn-%d{yyyy-MM-dd}-%i.log</Property>
+        <Property name="FILE_PATTERN_ERROR">${sys:user.home}/logs/demo-ribbon-client/$${date:yyyy-MM}/error-%d{yyyy-MM-dd}-%i.log</Property>
     </Properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT" follow="true">
