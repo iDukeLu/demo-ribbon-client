@@ -2,7 +2,7 @@ package com.idukelu.demo.demoribbonclient.business.controller;
 
 
 import com.idukelu.demo.demoribbonclient.business.pojo.dto.User;
-import com.idukelu.demo.demoribbonclient.business.service.LoginService;
+import com.idukelu.demo.demoribbonclient.business.service.RibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,33 +10,33 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-public class LoginController {
+public class RibbonController {
 
-    private LoginService loginService;
+    private RibbonService ribbonService;
 
     @Autowired
-    public LoginController(LoginService loginService) {
-        this.loginService = loginService;
+    public RibbonController(RibbonService ribbonService) {
+        this.ribbonService = ribbonService;
     }
 
 
     @PostMapping("")
     public ResponseEntity<?> createUser(@RequestBody User user) throws Exception {
-        return loginService.createUser(user);
+        return ribbonService.createUser(user);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
-        return loginService.deleteUser(id);
+        return ribbonService.deleteUser(id);
     }
 
     @PutMapping("")
     public ResponseEntity<?> updateUser(@RequestBody User user) throws Exception {
-        return loginService.updateUser(user);
+        return ribbonService.updateUser(user);
     }
 
     @GetMapping("")
     public ResponseEntity<?> getUser(@RequestParam(required = false) String id, @RequestParam(required = false) String username) throws Exception {
-        return loginService.getUser(id, username);
+        return ribbonService.getUser(id, username);
     }
 }

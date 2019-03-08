@@ -1,7 +1,7 @@
 package com.idukelu.demo.demoribbonclient.business.service.impl;
 
 import com.idukelu.demo.demoribbonclient.business.pojo.dto.User;
-import com.idukelu.demo.demoribbonclient.business.service.LoginService;
+import com.idukelu.demo.demoribbonclient.business.service.RibbonService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class LoginServiceImpl implements LoginService {
+public class RibbonServiceImpl implements RibbonService {
 
     private RestTemplate restTemplate;
 
     @Autowired
-    public LoginServiceImpl(RestTemplate restTemplate) {
+    public RibbonServiceImpl(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

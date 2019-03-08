@@ -1,4 +1,4 @@
 package com.idukelu.demo.demoribbonclient.business.dao;
 
-public interface LoginDao {
+public interface RibbonDao {
 }

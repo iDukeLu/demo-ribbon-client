@@ -3,7 +3,7 @@ package com.idukelu.demo.demoribbonclient.business.service;
 import com.idukelu.demo.demoribbonclient.business.pojo.dto.User;
 import org.springframework.http.ResponseEntity;
 
-public interface LoginService {
+public interface RibbonService {
     ResponseEntity<?> createUser(User user) throws Exception;
 
     ResponseEntity<?> deleteUser(String id) throws Exception;
