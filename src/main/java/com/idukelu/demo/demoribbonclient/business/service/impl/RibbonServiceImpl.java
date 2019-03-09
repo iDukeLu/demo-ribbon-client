@@ -18,41 +18,41 @@ public class RibbonServiceImpl implements RibbonService {
         this.restTemplate = restTemplate;
     }
 
-    @HystrixCommand(fallbackMethod="createUserError")
+    @HystrixCommand(fallbackMethod="createUserFailback")
     public ResponseEntity<?> createUser(User user) throws Exception{
-        return ResponseEntity.ok(restTemplate.postForObject("http://DEMO-EUREKA-CLIENT/user", user, User.class));
+        return ResponseEntity.ok(restTemplate.postForObject("http://DEMO-EUREKA-CLIENT/eurekasvr", user, User.class));
     }
 
-    @HystrixCommand(fallbackMethod="deleteUserError")
+    @HystrixCommand(fallbackMethod="deleteUserFailback")
     public ResponseEntity<?> deleteUser(String id) throws Exception {
-        restTemplate.delete("http://DEMO-EUREKA-CLIENT/user/1");
+        restTemplate.delete("http://DEMO-EUREKA-CLIENT/eurekasvr/1");
         return ResponseEntity.ok(id);
     }
 
-    @HystrixCommand(fallbackMethod="updateUserError")
+    @HystrixCommand(fallbackMethod="updateUserFailback")
     public ResponseEntity<?> updateUser(User user) throws Exception {
-        restTemplate.put("http://DEMO-EUREKA-CLIENT/user", user, User.class);
+        restTemplate.put("http://DEMO-EUREKA-CLIENT/eurekasvr", user, User.class);
         return ResponseEntity.ok(user);
     }
 
-    @HystrixCommand(fallbackMethod="getUserError")
+    @HystrixCommand(fallbackMethod="getUserFailback")
     public ResponseEntity<?> getUser(String id, String username) throws Exception {
-        return ResponseEntity.ok(restTemplate.getForObject("http://DEMO-EUREKA-CLIENT/user?id="+id, User.class));
+        return ResponseEntity.ok(restTemplate.getForObject("http://DEMO-EUREKA-CLIENT/eurekasvr?id={1}", User.class, id));
     }
 
-    public ResponseEntity<?> createUserError(User user) throws Exception{
+    public ResponseEntity<?> createUserFailback(User user, Throwable e) throws Exception{
         return ResponseEntity.ok("创建用户失败！！！");
     }
 
-    public ResponseEntity<?> deleteUserError(String id) throws Exception{
+    public ResponseEntity<?> deleteUserFailback(String id, Throwable e) throws Exception{
         return ResponseEntity.ok("删除用户失败！！！");
     }
 
-    public ResponseEntity<?> updateUserError(User user) throws Exception{
+    public ResponseEntity<?> updateUserFailback(User user, Throwable e) throws Exception{
         return ResponseEntity.ok("修改用户失败！！！");
     }
 
-    public ResponseEntity<?> getUserError(String id, String username) throws Exception{
+    public ResponseEntity<?> getUserFailback(String id, String username, Throwable e) throws Exception{
         return ResponseEntity.ok("查询用户失败！！！");
     }
 }
