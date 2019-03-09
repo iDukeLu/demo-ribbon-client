@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/ribbonsvr", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class RibbonController {
 
     private RibbonService ribbonService;
