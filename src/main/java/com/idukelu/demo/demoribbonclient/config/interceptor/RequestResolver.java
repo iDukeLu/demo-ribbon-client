@@ -25,14 +25,7 @@ public class RequestResolver {
         builder.append("In Site: ").append(SEPARATOR)
                 .append(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>").append(SEPARATOR)
                 .append(" ").append(request.getMethod()).append(" : ").append(request.getRequestURL()).append(SEPARATOR)
-                .append("【Inbound】").append(SEPARATOR)
-                .append(" Encoding: ").append(request.getCharacterEncoding()).append("; ");
-
-        String contentType = request.getContentType();
-        if (contentType != null) {
-            builder.append(" ContentType: ").append(contentType);
-        }
-        builder.append(SEPARATOR);
+                .append("【Inbound】").append(SEPARATOR);
 
         Map<String, String[]> parameterMap = request.getParameterMap();
         if (parameterMap.size() > 0) {
@@ -42,6 +35,9 @@ public class RequestResolver {
             }
         }
         builder.append(SEPARATOR);
+
+        builder.append(" Encoding: ").append(request.getCharacterEncoding()).append("; ")
+                .append(" ContentType: ").append(request.getContentType()).append(SEPARATOR);
 
         Enumeration<String> headerNames = request.getHeaderNames();
         if (headerNames.hasMoreElements()) {
