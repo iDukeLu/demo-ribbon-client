@@ -23,7 +23,7 @@ public class RequestResolver {
 
 
         builder.append("In Site: ").append(SEPARATOR)
-                .append("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<").append(SEPARATOR)
+                .append(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>").append(SEPARATOR)
                 .append(" ").append(request.getMethod()).append(" : ").append(request.getRequestURL()).append(SEPARATOR)
                 .append("【Inbound】").append(SEPARATOR)
                 .append(" Encoding: ").append(request.getCharacterEncoding()).append("; ");
@@ -82,7 +82,7 @@ public class RequestResolver {
 
         outerTime = System.currentTimeMillis();
         builder.append(SEPARATOR).append(" Time-consuming：").append(outerTime-innerTime).append(" ms").append(SEPARATOR)
-                .append(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                .append("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
         return builder;
     }
