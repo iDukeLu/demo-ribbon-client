@@ -33,8 +33,8 @@ public class RequestResolver {
             for (Map.Entry<String, String[]> param : parameterMap.entrySet()) {
                 builder.append("[").append(param.getKey()).append( ": ").append(Arrays.toString(param.getValue())).append("]; ");
             }
+            builder.append(SEPARATOR);
         }
-        builder.append(SEPARATOR);
 
         builder.append(" Encoding: ").append(request.getCharacterEncoding()).append("; ")
                 .append(" ContentType: ").append(request.getContentType()).append(SEPARATOR);
@@ -43,8 +43,9 @@ public class RequestResolver {
         if (headerNames.hasMoreElements()) {
             builder.append(" Headers: ");
             while (headerNames.hasMoreElements()){
-                builder.append("[").append(headerNames.nextElement()).append(":")
-                        .append(request.getHeader(headerNames.nextElement())).append("]; ");
+                String headerName = headerNames.nextElement();
+                builder.append("[").append(headerName).append(":")
+                        .append(request.getHeader(headerName)).append("]; ");
             }
         }
 
